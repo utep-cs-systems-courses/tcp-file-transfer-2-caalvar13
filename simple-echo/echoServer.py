@@ -9,7 +9,7 @@ sys.path.append("../lib")       # for params
 import params
 
 switchesVarDefaults = (
-    (('-l', '--listenPort') ,'listenPort', 50001),
+    (('-l', '--listenPort') ,'listenPort', 50000),
     (('-?', '--usage'), "usage", False), # boolean (set if present)
     )
 
@@ -38,4 +38,3 @@ while 1:
     print(f"Received <{data}>, sending <{sendMsg}>")
     sendAll(conn, sendMsg.encode())
 conn.close()
-
